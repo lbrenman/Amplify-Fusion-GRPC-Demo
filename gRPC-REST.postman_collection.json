@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "09bead28-3c5f-49fe-a451-4b795748f9b0",
+    "name": "gRPC-REST",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1694256"
+  },
+  "item": [
+    {
+      "name": "Get Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "hOuI0fxINs6bcFT8geli46dT6z4N87Q7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"1008\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://10-128-150-128.nip.io:4443/warehouse/orders/orders.v1.OrdersService/GetOrder",
+          "protocol": "https",
+          "host": [
+            "10-128-150-128",
+            "nip",
+            "io"
+          ],
+          "port": "4443",
+          "path": [
+            "warehouse",
+            "orders",
+            "orders.v1.OrdersService",
+            "GetOrder"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "hOuI0fxINs6bcFT8geli46dT6z4N87Q7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"customerId\": \"cust-002\",\r\n        \"customerEmail\": \"bob@example.com\",\r\n        \"items\": [\r\n            {\r\n            \"sku\": \"SKU-555\",\r\n            \"name\": \"Coffee Grinder\",\r\n            \"quantity\": 1,\r\n            \"unitPrice\": {\r\n                \"currencyCode\": \"EUR\",\r\n                \"units\": \"333\"\r\n            }\r\n        }\r\n    ],\r\n    \"notes\": \"Ring the doorbell\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://10-128-150-128.nip.io:4443/warehouse/orders/orders.v1.OrdersService/CreateOrder",
+          "protocol": "https",
+          "host": [
+            "10-128-150-128",
+            "nip",
+            "io"
+          ],
+          "port": "4443",
+          "path": [
+            "warehouse",
+            "orders",
+            "orders.v1.OrdersService",
+            "CreateOrder"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Order - google annotations",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "hOuI0fxINs6bcFT8geli46dT6z4N87Q7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"1008\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://10-128-150-128.nip.io:4443/warehouse/orders/annotations/v1/orders/1008",
+          "protocol": "https",
+          "host": [
+            "10-128-150-128",
+            "nip",
+            "io"
+          ],
+          "port": "4443",
+          "path": [
+            "warehouse",
+            "orders",
+            "annotations",
+            "v1",
+            "orders",
+            "1008"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Order - google annotations",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "hOuI0fxINs6bcFT8geli46dT6z4N87Q7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"customerId\": \"cust-002\",\r\n        \"customerEmail\": \"bob@example.com\",\r\n        \"items\": [\r\n            {\r\n            \"sku\": \"SKU-555\",\r\n            \"name\": \"Coffee Grinder\",\r\n            \"quantity\": 1,\r\n            \"unitPrice\": {\r\n                \"currencyCode\": \"EUR\",\r\n                \"units\": \"333\"\r\n            }\r\n        }\r\n    ],\r\n    \"notes\": \"Ring the doorbell\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://10-128-150-128.nip.io:4443/warehouse/orders/orders.v1.OrdersService/CreateOrder",
+          "protocol": "https",
+          "host": [
+            "10-128-150-128",
+            "nip",
+            "io"
+          ],
+          "port": "4443",
+          "path": [
+            "warehouse",
+            "orders",
+            "orders.v1.OrdersService",
+            "CreateOrder"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Orders - google annotations",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
